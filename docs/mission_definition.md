@@ -14,3 +14,5 @@ To design and operate regionally focused Earth observation satellite that delive
 ## Name of the Stellite
 
 YPSAT (Yield and Planning Satellite)
+
+## Mission Definition
