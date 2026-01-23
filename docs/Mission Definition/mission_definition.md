@@ -128,7 +128,7 @@ $$
 $$
 
 $$
-    n = \frac{2\pi}{5736} = 0.001095 rad/s
+    n = \frac{2\pi}{5736} = 0.001095 \text{ rad/s}
 $$
 
 In revolutions per day:
@@ -136,3 +136,13 @@ In revolutions per day:
 $$
     n = \frac{\text{Minutes in a day}}{\text{Minutes taken for single revolution (T)}} = \frac{1440}{95.6} \approx  15.06 \text{ rev/day}
 $$
+
+#### Orbital Velocity (v)
+
+For a circular orbit:
+
+$$
+    v = \sqrt{\frac{\mu}{a}} = \sqrt{\frac{398600}{6917}} = 7.59 \text{ km/s}
+$$
+
+
