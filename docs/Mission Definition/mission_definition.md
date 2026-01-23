@@ -78,3 +78,7 @@ RAAN is usually expressed between $0\degree$ and $360\degree$, so
 $$
     \Omega = 337.5\degree
 $$
+
+#### Argument of Perigee : $0\degree$
+
+#### True Anomaly : $0\degree$
