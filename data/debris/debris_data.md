@@ -24,7 +24,7 @@ The debris dataset collected during this period includes:
 
 - Catalogued resident sapce objects (RSOs) in low Earth orbit, including:
 
-    - Defunct ssatellites
+    - Defunct satellites
     - Fragmentation debris
     - Upper stages and mission-related objects
 
