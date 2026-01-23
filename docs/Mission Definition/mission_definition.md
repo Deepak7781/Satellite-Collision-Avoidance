@@ -100,3 +100,22 @@ $$
 $$
 
 Imaging satellites typically allow $\pm 5 - 10$ km variation
+
+#### Orbital Period (T)
+
+Kepler's Third Law:
+
+$$
+    T = 2\pi \sqrt{\frac{a^3}{\mu}}
+$$
+
+Earth gravitational parameter, $\mu = 398600 \text{ }km^3/s^2$
+
+$$
+    T = 2\pi \sqrt{\frac{(6924)^3}{3986000}}
+$$
+
+$$
+    T \approx 95.6~\text{minutes}
+$$
+
