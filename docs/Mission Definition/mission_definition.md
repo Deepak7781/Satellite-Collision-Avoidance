@@ -82,3 +82,21 @@ $$
 #### Argument of Perigee : $0\degree$
 
 #### True Anomaly : $0\degree$
+
+---
+
+### Derived Orbit Characteristics
+
+#### Perigee and Apogee Altitudes
+
+For near-circular orbit (e $\approx$ 0), but for realism we chose $e = 0.001$
+
+$$
+    r_p = a(1 - e) = 6917(1 - 0.001) = 6910 km \implies 539 km
+$$
+
+$$
+    r_a = a(1 + e) = 6917(1 + 0.001) = 6924 km \implies 553 km
+$$
+
+Imaging satellites typically allow $\pm 5 - 10$ km variation
