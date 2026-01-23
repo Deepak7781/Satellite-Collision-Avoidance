@@ -70,5 +70,11 @@ $$
 $$
 
 $$
-\Omega = 337.5\degree
+\Omega = -22.5\degree
+$$
+
+RAAN is usually expressed between $0\degree$ and $360\degree$, so
+
+$$
+    \Omega = 337.5\degree
 $$
