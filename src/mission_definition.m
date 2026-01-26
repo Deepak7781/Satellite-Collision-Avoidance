@@ -8,7 +8,7 @@ mission.durationInDays = days(mission.duration);
 
 % Orbital Elements
 mission.orbitAltitude = 546; % Altitude in kilometers
-mission.semimajoraxis = 6371 + mission.orbitAltitude; % semi-major axis in km
+mission.semimajoraxis = (6371 + mission.orbitAltitude)*1e3; % semi-major axis in m
 mission.inclination = 97.4; % Inclination in degrees
 mission.eccentricity = 0.001; % Eccentricity of the orbit
 mission.orbitPeriod = 2 * pi * sqrt((mission.semimajoraxis)^3 / 398600); % Orbital period in seconds
