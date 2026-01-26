@@ -3,3 +3,14 @@ mission = mission_definition();
 startTime = mission.startDate;
 endTime = mission.endDate;
 sampleTime = 20;
+
+scenario = satelliteScenario(startTime, endTime, sampleTime);
+
+% Orbit Definiton
+
+semiMajorAxis = mission.semimajoraxis;
+eccentricity = mission.eccentricity;
+inclination = mission.inclination;
+RAAN
+
+satelliteScenarioViewer(scenario);

@@ -1,7 +1,7 @@
 function mission = mission_definition()
 
 mission.startDate = datetime(2025, 3, 21, 12, 0, 0);
-mission.endDate = datetime(2025, 6, 21, 12, 0, 0);
+mission.endDate = datetime(2025, 3, 28, 12, 0, 0);
 mission.duration = mission.endDate - mission.startDate;
 
 mission.durationInDays = days(mission.duration);
