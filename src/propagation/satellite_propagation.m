@@ -1,5 +1,8 @@
+
+% Get mission specifications from mission_definition function
 mission = mission_definition();
 
+% Unpack the scenario details
 startTime = mission.startDate;
 endTime = mission.endDate;
 sampleTime = 20;
@@ -17,7 +20,7 @@ trueAnomaly = mission.trueAnomaly;
 
 % Adding YPSAT to the scenario
 
-YPSAT = satellite(scenario, semiMajorAxis, eccentricity, inclination, RAAN, argumentOfPerigee, trueAnomaly);
+YPSAT = satellite(scenario, semiMajorAxis, eccentricity, inclination, RAAN, argumentOfPerigee, trueAnomaly,"Name","YPSAT");
 
 
-satelliteScenarioViewer(scenario);
+play(scenario);
