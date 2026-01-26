@@ -9,4 +9,9 @@ stopTime = mission.endDate;
 
 scenario = satelliteScenario(startTime, stopTime, 20);
 
-debris = satellite(scenario,)
+debris = satellite(scenario, tle_file);
+
+play(scenario);
+
+% Debris Data
+

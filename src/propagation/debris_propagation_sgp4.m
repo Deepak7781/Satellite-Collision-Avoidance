@@ -11,4 +11,9 @@ scenario = satelliteScenario(startTime, stopTime, 20);
 
 debris = satellite(scenario, tle_file);
 
-satelliteScenarioViewer(scenario)
+play(scenario);
+
+% Debris Data
+disp("Debris Information");
+fprintf("Name of the Debris : %s\n",debris.Name);
+fprintf("Orbit Propagator : %s\n", debris.OrbitPropagator);
