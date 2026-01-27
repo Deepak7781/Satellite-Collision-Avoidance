@@ -4,13 +4,7 @@ tle_file = '\data\debris\iridium33_deb.tle';
 
 mission = mission_definition();
 
-startTime = mission.startDate;
-stopTime = mission.endDate;
-
-scenario = satelliteScenario(startTime, stopTime, 20);
-
-debris = satellite(scenario, tle_file);
-
+[scenario, debris] = createDebris(mission, tle_file);
 play(scenario);
 
 % Debris Data
