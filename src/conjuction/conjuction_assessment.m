@@ -4,9 +4,15 @@ tle_file = '\data\debris\iridium33_deb.tle';
 
 mission = mission_definition();
 
-[scenario, YPSAT] = createSat(mission);
+scenario = createScenario(mission);
 
-[~, debris] = createDebris(mission, tle_file);
+YPSAT = createSat(scenario, mission);
 
+debris = createDebris(scenario, tle_file);
+
+[windows, minRange] = detect_conjuctions(YPSAT, debris);
+
+disp(windows);
+disp(minRange);
 
 play(scenario)
