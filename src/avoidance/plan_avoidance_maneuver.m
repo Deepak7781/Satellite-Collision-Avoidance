@@ -1,19 +1,19 @@
 
+function [tca, missDistance, isRequired] = plan_avoidance_maneuver(tle_file)
 
-tle_file = '\data\debris\iridium33_deb.tle';
-
-mission = mission_definition();
-
-scenario = createScenario(mission);
-
-YPSAT = createSat(scenario, mission);
-
-debris = createDebris(scenario, tle_file);
-
-[tca, missDistance] = detect_conjuctions(YPSAT, debris);
-
-safeDistance = 40e3;
-
-if missDistance < safeDistance
-    fprintf("Avoidance Manuveur is required")
+    mission = mission_definition();
+    
+    scenario = createScenario(mission);
+    
+    YPSAT = createSat(scenario, mission);
+    
+    debris = createDebris(scenario, tle_file);
+    
+    [tca, missDistance] = detect_conjuctions(YPSAT, debris);
+    
+    safeDistance = 40e3;
+    
+    if missDistance < safeDistance
+        isRequired = true;
+    end
 end
