@@ -11,9 +11,3 @@ YPSAT = createSat(scenario, mission);
 debris = createDebris(scenario, tle_file);
 
 [tca, missDistance] = detect_conjuctions(YPSAT, debris);
-
-safeDistance = 40e3;
-
-if missDistance < safeDistance
-    fprintf("Avoidance Manuveur is required")
-end

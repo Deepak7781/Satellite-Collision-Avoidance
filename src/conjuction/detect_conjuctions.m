@@ -1,6 +1,6 @@
 % Function for detecting the window of conjuctions
 
-function [windows, minRange] = detect_conjuctions(YPSAT, debris)
+function [tca, minRange] = detect_conjuctions(YPSAT, debris)
     % YPSAT: staellite object, debris: satellite object
     
     % Finding the range between YPSAT and debris
@@ -29,6 +29,6 @@ function [windows, minRange] = detect_conjuctions(YPSAT, debris)
 
     kWindow = kWindow(:, 1:j-1);
     
-    windows = tout(kWindow);
-    minRange = min(range);
+    [minRange,idx] = min(range);
+    tca = tout(idx);
 end
