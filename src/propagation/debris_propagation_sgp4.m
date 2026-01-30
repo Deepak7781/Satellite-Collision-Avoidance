@@ -4,7 +4,9 @@ tle_file = '\data\debris\iridium33_deb.tle';
 
 mission = mission_definition();
 
-[scenario, debris] = createDebris(mission, tle_file);
+scenario = createScenario(mission);
+
+debris = createDebris(scenario,tle_file);
 play(scenario);
 
 % Debris Data

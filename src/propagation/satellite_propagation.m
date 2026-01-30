@@ -2,8 +2,9 @@
 % Get mission specifications from mission_definition function
 mission = mission_definition();
 
+scenario = createScenario(mission);
 % Use the function created to create a scenario and satellite
-[scenario,YPSAT] = createSat(mission);
+YPSAT = createSat(scenario, mission);
 YPSAT.MarkerColor = [1 0 1];
 
 % Simulation of the scenario
