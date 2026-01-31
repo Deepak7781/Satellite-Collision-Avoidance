@@ -9,7 +9,7 @@ function [tca, missDistance, isRequired] = plan_avoidance_maneuver(tle_file)
     
     debris = createDebris(scenario, tle_file);
     
-    [tca, missDistance] = detect_conjuctions(YPSAT, debris);
+    [tca, missDistance] = detect_conjunctions(YPSAT, debris);
     
     safeDistance = 40e3;
     
