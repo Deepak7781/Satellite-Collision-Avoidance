@@ -1,6 +1,6 @@
 % Function for detecting the window of conjuctions
 
-function [tca, minRange] = detect_conjuctions(YPSAT, debris)
+function [tca, minRange] = detect_conjunctions(YPSAT, debris)
     % YPSAT: staellite object, debris: satellite object
     
     % Finding the range between YPSAT and debris
