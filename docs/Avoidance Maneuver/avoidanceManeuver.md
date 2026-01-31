@@ -80,3 +80,68 @@ $$
 $$
 
 This value is the primary metric used to assess collision risk in distance based conjunction analysis.
+
+## Orbital velocities and Collision Risk in LEO
+
+Typical orbital characteristics in LEO:
+- Orbital velocity: ~7.5 km/s
+- Relative velocity during conjunctions: 10 - 15 km/s
+
+At such velocities, even a millimeter sized object object enoigh kinetic energy to cause severe damage. Therefore, collision avoidance is neccessary even when the predicted miss distance is on the order of hundreds of meters.
+
+## Collision Avoidance Maneuver Concept
+
+### Fundamental Principle
+
+A collision occurs only if:
+- Two objects occupy the same location
+- At the same time
+
+Thus, collision avoidance does not require physically moving far away from the debris. Instead, it requires the satellite's motion such that it arrives at the conjunction point at a different time.
+
+## Velocity Change and Orbit Modification
+
+### Velocity vector
+
+The velocity of a satellite is defined as the time derivative of its position vector:
+
+$$
+    \mathbf{v}(t) = \frac{dx}{dt}
+$$
+
+Velocity determines both:
+- The shape of the orbit
+- The timing of motion along the orbit
+
+### Manuever ($\Delta V$)
+
+A maneuver is modeled as an impulsive change in velocity:
+
+$$
+    \mathbf{v}^+ = \mathbf{v}^- + \Delta V
+$$
+
+where, 
+- $\mathbf{v}^-$ is velocity before maneuver 
+- $\mathbf{v}^+$ is velocity after maneuver
+- $\Delta V$ is the applied velocity change
+
+## Along-Track Maneuvers
+
+### Along-Track Direction
+
+The along-track direction is the direction of motion of the satellite. The corresponding unit vector is:
+
+$$
+    \hat{t} = \frac{\mathbf{v}}{||\mathbf{v}||}
+$$
+
+### Effect of Along-Track $\Delta V$
+
+Applying a $\Delta V$ in the along-track direction:
+- Changes the  orbital energy
+- Modifies the semi-major axis
+- Alters the satellite's mean motion
+
+This causes the satellite to drift forward or backward along its orbit over time.
+
