@@ -145,3 +145,65 @@ Applying a $\Delta V$ in the along-track direction:
 
 This causes the satellite to drift forward or backward along its orbit over time.
 
+## Semi-Major Axis and Mean Motion
+
+### Semi-Major Axis
+
+The semi-major axis $a$ represents the characteristic size of the orbit. For circular or near-circular orbits, a $\approx$ orbital radius
+
+### Mean Motion
+
+Mean motion $n$ represents the average angular rate of orbital motion:
+
+$$
+    n = \sqrt{\frac{\mu}{a^3}}
+$$
+
+where,
+- $\mu$ is Earth's gravitational parameter
+
+A change in semi-major axis leads to a change in mean motion.
+- Larger $a \rightarrow$ slower motion
+- Smaller $a \leftarrow$ faster motion
+
+## Phase Drift and Miss Distance Increase
+
+After an along-track maneuver, the satellite's mean motion differs slightly from its original value. Over a time interval $\Delta t$, this difference accumulates into a phase shift.
+
+For small $\Delta V$ and short durations, the resulting along-track displacement can be approximated as:
+
+$$
+    \Delta s = \Delta V \cdot \Delta t
+$$
+
+This simple relation explains why, small $\Delta V$ values (cm/s to m/s) appied sufficiently early can generate kilometer-scale miss distances at TCA.
+
+## Distance-Based Maneuver Decision Logic
+
+In a distance only collison avoidance system, the decision rule is:
+
+If $d_{\text{min}} < d_{\text{threshold}} \implies \text{Execute Maneuver}$ 
+
+Typical threshold values for LEO missions range from: 500 m to 1 km
+
+## Maneuver Timing Considerations
+
+The effectiveness of a collision avoidance maneuver depends strongly on how early it is executed relative to TCA.
+
+Key principle: Earlier maeuvers require smaller $\Delta V$
+
+## Post Maneuver Verification (Re-screening)
+
+After executing a maeuver:
+
+1. The new orbit is propagated
+2. Conjunction analysis is repeated 
+3. The new miss distance id computed
+
+A maneuver is considered successful if
+
+$$
+    d_{\text{min,new}} > d_{\text{threshold}}
+$$
+
+This step ensures that the avoidance action has achieved the desired safety margin.
