@@ -41,7 +41,7 @@ if n(2)<0
 end
 
 % Eccentricity vector
-evec = (cross(vel,h)/mu) - pos/norm(pos);
+evec = (cross(vel/h)/mu) - pos/norm(pos);
 e = norm(evec);
 
 % Argument of perigee
@@ -51,13 +51,7 @@ if evec(3) < 0
 end
 
 % True anomaly
-nu = acos(dot(evec,pos)/(e*norm(pos)));
-if dot(pos, vel) < 0
-    nu = 2*pi - nu;
-end
-
-% Semi major axis
-a = 1/(2/norm(pos) - dot(vel, vel)/mu);
+n
 
 % vhat = vel/norm(vel);
 % 
