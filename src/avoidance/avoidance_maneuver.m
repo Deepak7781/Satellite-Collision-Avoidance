@@ -23,20 +23,22 @@ maneuverTime = tca - minutes(30);
 disp(pos);
 disp(vel);
 
-% vhat = vel/norm(vel);
-% 
-% detaV = 0.5; % m/s
-% 
-% vel_new = vel + detaV*vhat;
 
-% YPSAT_NEW = satellite(scenario, ...
-%                        pos, ...
-%                        vel_new, ...
-%                        maneuverTime, ...
-%                        "Name", "YPSAT_NEW");
-% 
-% [~,~,range_new,t_new] = aer(YPSAT_NEW, debris);
-% 
-% [minDist_new, idx2] = min(range_new);
-% 
-% fprintf("Miss distance AFTER maneuver: %.1f m\n", minDist_new);
+
+vhat = vel/norm(vel);
+
+detaV = 0.5; % m/s
+ 
+vel_new = vel + detaV*vhat;
+
+[a, ecc, incl, RAAN, argp, nu] = ijk2keplerian(pos, vel_new);
+
+YPSAT_NEW = satellite(scenario, a, ecc, incl, RAAN, argp, nu);
+
+% play(scenario);
+
+[~,~,range_new,t_new] = aer(YPSAT_NEW, debris);
+ 
+[minDist_new, idx2] = min(range_new);
+ 
+fprintf("Miss distance AFTER maneuver: %.1f m\n", minDist_new);
