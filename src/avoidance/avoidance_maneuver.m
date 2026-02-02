@@ -20,44 +20,8 @@ maneuverTime = tca - minutes(30);
 
 [pos, vel] = states(YPSAT, maneuverTime, "CoordinateFrame","inertial");
 
-mu = 398600; % kg3/s2
-
-% Angular Momentum
-h = cross(pos, vel);
-hmag = norm(h);
-
-% Inclination
-i = acos(h(3)/hmag);
-
-% Node vector
-k = [0 0 1];
-n = cross(k,h);
-nmag = norm(n);
-
-% RAAN
-RAAN = acos(n(1)/nmag);
-if n(2)<0
-    RAAN = 2*pi - RAAN;
-end
-
-% Eccentricity vector
-evec = (cross(vel,h)/mu) - pos/norm(pos);
-e = norm(evec);
-
-% Argument of perigee
-omega = acos(dot(n,evec)/(nmag*e));
-if evec(3) < 0
-    omega = 2*pi - omega;
-end
-
-% True anomaly
-nu = acos(dot(evec,pos)/(e*norm(pos)));
-if dot(pos, vel) < 0
-    nu = 2*pi - nu;
-end
-
-% Semi major axis
-a = 1/(2/norm(pos) - dot(vel, vel)/mu);
+disp(pos);
+disp(vel);
 
 % vhat = vel/norm(vel);
 % 
