@@ -33,16 +33,13 @@ vel_new = vel + detaV*vhat;
 
 [a, ecc, incl, RAAN, argp, nu] = ijk2keplerian(pos, vel_new);
 
-YPSAT_NEW = satellite(scenario, a, ecc, incl, RAAN, argp, nu,'Name','YPSAT');
+YPSAT_NEW = satellite(scenario, a, ecc, incl, RAAN, argp, nu, 'Name','YPSAT');
 
 
 [~,~,range_new,t_new] = aer(YPSAT_NEW, debris);
  
 [minDist_new, idx2] = min(range_new);
  
-tout_new = t_new(idx2);
-
-disp(tout_new);
 fprintf("Miss distance AFTER maneuver: %.1f m\n", minDist_new);
 
 
@@ -53,12 +50,10 @@ debris.Orbit.LineColor = "red";
 debris.MarkerColor = "red";
 
 % Update the visualization for the new satellite
-YPSAT.orbit.LineColor = "magenta";
+YPSAT.orbit.LieColor = "magenta";
 YPSAT.MarkerColor = "magenta";
 
 YPSAT_NEW.Orbit.LineColor = "green";
 YPSAT_NEW.MarkerColor = "green";
-
-
 
 play(scenario);
